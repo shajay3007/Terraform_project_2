@@ -1,3 +1,5 @@
 vpc_cidr = "10.0.0.0/16"
 pub_subnet_ip="10.0.0.0/17"
 av_zone = "us-east-1a"
+image_id = "ami-0e86e20dae9224db8"
+instance_type= "t2.micro"

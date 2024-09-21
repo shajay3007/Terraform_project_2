@@ -4,7 +4,6 @@ resource "aws_vpc" "my_vpc" {
 }
 
 # create subnet
-
 resource "aws_subnet" "Public_subnet1" {
   vpc_id = aws_vpc.my_vpc.id
   cidr_block = var.pub_subnet_ip
@@ -84,8 +83,8 @@ data "template_file" "user_data" {
   count = 1
   subnet_id = aws_subnet.Public_subnet1.id
   security_groups = [aws_security_group.public_sg1.id]
-  instance_type   = "t2.micro"
- ami = "ami-0e86e20dae9224db8"
+  instance_type   = var.instance_type
+  ami = var.image_id
  key_name = "Devops_key"
  user_data = data.template_file.user_data.rendered
 
