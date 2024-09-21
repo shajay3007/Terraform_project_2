@@ -23,5 +23,5 @@ default = "ami-0e86e20dae9224db8_ddfdsffd"
 #5...instance type
 variable "instance_type" {
   description = "this is the instance type"
-  default = "t2.micro"
+  default = "t2.small"
 }
